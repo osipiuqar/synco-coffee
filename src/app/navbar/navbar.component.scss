@@ -1,9 +1,8 @@
 .navbar {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
   background-color: #fff;
-  padding: 0rem 1rem;
+  padding: 0.5rem 1.5rem;
   color: #3e2c23;
   position: fixed;
   top: 0;
@@ -11,31 +10,24 @@
   width: 100%;
   z-index: 100;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  height: 70px;
 
-  .navbar-brand a {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #3e2c23;
-    text-decoration: none;
-  }
-
-  .navbar-links {
-    list-style: none;
+  .navbar-brand {
     display: flex;
-    gap: 1.5rem;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
 
-    li a {
-      color: #3e2c23;
-      text-decoration: none;
-      font-weight: 500;
-      transition: all 0.2s ease;
+    a {
+      display: flex;
+      align-items: center;
 
-      &.active,
-      &:hover {
-        color: #fff;
-        background-color: #3e2c23;
-        padding: 0.3rem 0.6rem;
-        border-radius: 5px;
+      img.logo {
+        height: 60px;
+        width: auto;
+        object-fit: contain;
       }
     }
   }
