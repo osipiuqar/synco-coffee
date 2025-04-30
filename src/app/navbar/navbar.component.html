@@ -1,0 +1,15 @@
+<nav class="navbar">
+  <div class="navbar-brand">
+    <a routerLink="/">SYNCO</a>
+  </div>
+  <ul class="navbar-links">
+    <li *ngFor="let link of navLinks">
+      <a
+        [routerLink]="link.path"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        >{{ link.label }}</a
+      >
+    </li>
+  </ul>
+</nav>
