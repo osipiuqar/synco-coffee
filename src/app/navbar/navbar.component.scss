@@ -44,9 +44,13 @@
   .navbar-links {
     list-style: none;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
     gap: 1.5rem;
+    padding: 0.5rem 0;
 
     li a {
+      white-space: nowrap;
       color: #3e2c23;
       text-decoration: none;
       font-weight: 500;
@@ -63,8 +67,13 @@
 
   // Mobile styles
   @media (max-width: 768px) {
+    .navbar-brand {
+      flex-direction: row;
+    }
+
     .navbar-links {
       flex-direction: column;
+      align-items: flex-start;
       width: 100%;
       display: none;
 

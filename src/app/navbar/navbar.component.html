@@ -3,18 +3,18 @@
     <a routerLink="/"
       ><img src="assets\photos\synco-logo.jpg" alt="SYNCO Logo" class="logo"
     /></a>
-  </div>
 
-  <ul class="navbar-links">
-    <li *ngFor="let link of navLinks">
-      <a
-        [routerLink]="link.path"
-        routerLinkActive="active"
-        [routerLinkActiveOptions]="{ exact: true }"
-        (click)="showMenu = false"
-      >
-        {{ link.label }}
-      </a>
-    </li>
-  </ul>
+    <ul class="navbar-links">
+      <li *ngFor="let link of navLinks">
+        <a
+          [routerLink]="link.path"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+          (click)="showMenu = false"
+        >
+          {{ link.label }}
+        </a>
+      </li>
+    </ul>
+  </div>
 </nav>
