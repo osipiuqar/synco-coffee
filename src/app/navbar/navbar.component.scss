@@ -30,5 +30,55 @@
         object-fit: contain;
       }
     }
+
+    .burger {
+      display: none;
+      font-size: 1.8rem;
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: #3e2c23;
+    }
+  }
+
+  .navbar-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+
+    li a {
+      color: #3e2c23;
+      text-decoration: none;
+      font-weight: 500;
+
+      &.active,
+      &:hover {
+        color: #fff;
+        background-color: #3e2c23;
+        padding: 0.3rem 0.6rem;
+        border-radius: 5px;
+      }
+    }
+  }
+
+  // Mobile styles
+  @media (max-width: 768px) {
+    .navbar-links {
+      flex-direction: column;
+      width: 100%;
+      display: none;
+
+      &.show {
+        display: flex;
+      }
+
+      li {
+        padding: 0.5rem 0;
+      }
+    }
+
+    .burger {
+      display: block;
+    }
   }
 }

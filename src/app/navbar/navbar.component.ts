@@ -1,18 +1,18 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { SidenavComponent } from '../sidenav/sidenav.component';
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [CommonModule, RouterModule, SidenavComponent],
+  imports: [CommonModule, RouterModule],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss',
 })
 export class NavbarComponent {
-  isNavbarVisible: boolean = false;
-
-  toggleNavbar(): void {
-    this.isNavbarVisible = !this.isNavbarVisible;
-  }
+  showMenu: boolean = false;
+  navLinks = [
+    { label: 'Home', path: '/' },
+    { label: 'Menu', path: '/menu' },
+    { label: 'Contact Us', path: '/contact-us' },
+  ];
 }
