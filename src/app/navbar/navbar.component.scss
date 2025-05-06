@@ -44,22 +44,23 @@
   .navbar-links {
     list-style: none;
     display: flex;
-    flex-wrap: wrap;
+    // flex-wrap: wrap;
     justify-content: flex-start;
     gap: 1.5rem;
-    padding: 0.5rem 0;
+    padding: 0.5rem 0.5rem;
 
     li a {
       white-space: nowrap;
       color: #3e2c23;
       text-decoration: none;
       font-weight: 500;
+      align-items: center;
 
       &.active,
       &:hover {
         color: #fff;
         background-color: #3e2c23;
-        padding: 0.3rem 0.6rem;
+        // padding: 0.3rem 0.6rem;
         border-radius: 5px;
       }
     }
